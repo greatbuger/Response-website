@@ -1,0 +1,389 @@
+/* ===========
+   基本默认值
+   ===========*/
+
+html{
+    font-size: 62.5%;
+    color:#222;
+}
+::selection{
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+/* ==========
+   工具样式
+   ========== */
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+/* ==========
+   浏览器更新提示样式
+   ========== */
+.browseupgrade{
+    margin: 0;
+    padding: 1rem;
+    background: #ccc;
+}
+
+/* ==========
+   自定义页面样式
+   ========== */
+
+body {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: #f7f7f7;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #0ae;
+    text-decoration: underline;
+}
+
+/*网站头部*/
+header {
+    width: 100%;
+}
+header .top{
+    line-height: 3rem;
+    padding: 0 0 0 1.5rem;
+    background:#555;
+    color:#fff;
+    border-bottom: 1px #ecc000 solid;
+}
+header .top .tel{
+    float: left;
+}
+header .top ul{
+    text-align: right;
+}
+header .top ul li{
+    display: inline-block;
+}
+header .top ul li + li{
+    border-left: 1px solid #999;
+    margin-left: -3px;
+    /*是为了去除因li标签换行产生的空白符，有缺点：各个浏览器不一定兼容，不一定是3px，
+    还有li标签不闭合的方法；
+    还有在li的父元素ul定义font-size：0，然后再li定义font-size:12px,缺点是会产生下边距*/
+}
+header .top ul li a{
+    display: inline-block;/*a标签是行内元素，这是为了padding起作用*/
+    padding: 0 1rem;
+    color: #fff;
+}
+
+header .main{
+    padding:0;
+    line-height: 5.5rem;
+}
+header .main .brand{
+    float: left;
+    padding: 1rem 0 0 0;
+}
+header .main ul{
+    text-align: right;
+}
+header .main ul li{
+    display: inline-block;
+}
+header .main ul li + li {
+    border-left: 1px solid #f0ede9;
+}
+header .main ul li a{
+    display: inline-block;
+    padding: 0 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 5.5rem;
+    color: #7c7a65;
+    text-decoration: none;
+}
+header .main ul li a:hover,
+header .main ul li a.active {
+    color: #ffb300;
+    background-color: #f8f6f1;
+}
+
+
+
+    /*****************
+    * 主要内容
+    ****************/
+.container{
+    width: 100%;
+}
+
+.transaction{
+    width: 100%;
+    background-color: #7C7365;
+}
+
+.trans-content{
+    max-width: 90%;
+    height: 4rem;
+    font-size: 1.4rem;
+    margin: 0 auto;
+}
+.trans-data{
+    float: left;
+    margin-left: 1rem;
+}
+
+.trans-data span{
+    display: inline-block;
+    line-height: 4rem;
+    color: #fff;
+}
+.trans-data .trans-mony{
+    border-radius: .3rem;
+    background-color: #F2F1F0;
+    color: #FBA400;
+    letter-spacing: 3px;
+    box-shadow: 1px 2px 1px #333 inset;
+    font-size: 2rem;
+    line-height: 2.5rem;
+
+}
+.trans-report{
+    text-align: right;
+    padding: 0.5rem 1rem;
+}
+
+.trans-report a{
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*底部*/
+footer {
+    width: 100%;
+    background-color: #ededed;
+    padding: 3rem 0 5rem;
+}
+footer ul{
+    text-align: center;
+}
+
+footer ul li{
+    display: inline-block;
+}
+footer ul li .icon{
+    display: inline-block;
+    text-indent: -999rem;/*通过文字的缩进隐藏文字*/
+    margin-right: 1.5rem;
+    background: url("../img/cert1.png")no-repeat;
+    background-size: 466px 447px;
+    overflow: hidden;
+
+}
+footer ul li .iocn-zfywxk{
+    width: 38px;
+    height: 27px;
+    background-position: -369px -45px;
+}
+footer ul li .iocn-pcirz{
+    width: 78px;
+    height: 27px;
+    background-position: -110px -96px;
+}
+footer ul li .iocn-visayz{
+    width: 36px;
+    height: 27px;
+    background-position: -426px -90px;
+}
+
+footer ul li .iocn-vsjmfw{
+    width: 63px;
+    height: 27px;
+    background-position: -401px -186px;
+}
+
+footer ul li .iocn-wlgs{
+    width: 78px;
+    height: 27px;
+    background-position: -110px -96px;
+}
+
+footer ul li .iocn-rzcx{
+    width: 75px;
+    height: 27px;
+    background-position: 0 -320px;
+}
+footer ul li .iocn-bjgs{
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+    background-size: 30px;
+    background-image: url('../img/cert2.png');
+}
+
+footer p{
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    margin: 2rem auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
