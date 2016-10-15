@@ -210,32 +210,228 @@ header .main ul li a.active {
 
 }
 .trans-report{
+
     text-align: right;
-    padding: 0.5rem 1rem;
+
 }
 
 .trans-report a{
+    display: inline-block;
+    padding: 1rem;
     color: #fff;
+
+}
+/*广告*/
+
+
+
+/*feature*/
+.feature{
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 0;
+}
+.feature .item{
+    display: inline-block;
+    width: calc(33.333333333333% - 1rem - 4px); /*需要减掉item之间的margin-left总和（1.5rem*2)、3个item的左右border宽度和（2px*2*3），*/
+    border: solid 2px #E6E6E6;
+    border-radius: 2px;
+    font-size: 16px;
+
+
+}
+.feature .item + .item{
+    margin-left: 1.5rem;
+}
+.feature .item h3{
+    float: left;
+    color: #FF9900;
+    margin: 2rem 2rem;
+    font-size: 2rem;
+}
+.feature .item ul{
+    display: inline-block;
+    margin: 1rem;
 }
 
+.feature .item ul li{
+    color: #999999;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    padding-left: 4rem;
+}
+/*notice*/
+.notice{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    height: 3rem;
+    background-color: #fff;
+    box-shadow: 0 0 4px #ccc;
+}
+.notice a:nth-child(1){
+    color: #AAAAAA;
+    padding: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.notice a:nth-child(1):before{
+    content: '最新公告';
+}
+.notice span{
+    line-height: 3rem;
+    padding: 1rem;
+    color: #AAAAAA;
+}
+.notice .more{
+    float: right;
+    line-height: 3rem;
+    margin-right: 1rem ;
+    color: #F90;
+}
+/*product*/
+.product{
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 1.4rem;
+    background-color: #f5f9fa;
+    border-top: 2px solid #FF7F27;
+    box-shadow: 0 0 4px #ccc;
+}
+.product h2{
+    float: left;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 2.4rem;
+    width: 30%;
+    color: #635c51;
+    padding: 5rem ;
+    font-weight: normal;
 
+}
+.product h2 em{
+    display: block;
+    text-align: center;
+    font-size: 1.4rem;
 
+}
+.product .product-content{
+    float:right;
+    width: 60%;
+    border-left: 1px solid #eee;
+    background-color: #f5f9fa;
+}
+.product .product-content .item{
+    width: 100%;
+}
+.product .product-content .item + .item{
+    border:1px solid #eee;
+}
+.product .product-content .item h3{
+    float: left;
+    width: 30%;
+    margin: 1.5rem 0;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: center;
+}
+.product .product-content .item h3 em{
+    margin-right: 0.5rem;
+    font-size: 3.6rem;
+    font-style: normal;
+    color: #999;
 
+}
+.product .product-content .item h3  i{
+    display: block;
+    font-style: normal;
+    color: #999;
+    font-size: 1.2rem;
+}
+.product .product-content .item .info{
+    float: left;
+    width: 50%;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+.product .product-content .item .info p{
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 50%;
+}
+.product .product-content .item .info p:last-child{
+    width: 40%;
+}
+.product .product-content .item .info p span{
 
+    display:block;
+    font-size: 2.4rem;
+    color: #ff9900;
+}
+.product .product-content .item .info p i{
+    float: right;
+    font-size: 1.2rem;
+    margin-top: -2rem;
+    margin-left: -200rem;
 
+}
+.product .product-content .item .buy{
+    float: left;
+    padding: 1rem;
+    width:5% ;
+}
+.product .product-content .item .buy a{
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 12rem;
+    line-height: 4rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff9900;
+    border-radius: 5px;
 
+}
+.product .product-content .item .buy a:hover,
+.product .product-content .item .buy a:active{
+    background-color: #ffc468;
+}
+.product .product-content .item .buy a:disabled{
+    background-color: #ccc !important;
+}
+/*底部导航*/
+.footer{
+    background-color: #E6E6E6;
+    border-top: 2px solid #eee;
+    padding: 3rem 0;
+}
+.footer-content{
+    width: 90%;
+    margin: 0 auto;
+}
+.footer-content .brand{
+    background: url("../img/logo@1x.png")no-repeat;
+    display: block;
+    float: left;
 
-
-
-
-
-
-
-
-
-
-
-
+    width: 20%;
+    height: 35px;
+}
+.footer-content ul{
+    float: left;
+    width: 15%;
+}
+.footer-content ul li{
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+}
+.footer-content ul li .title{
+    font-size: 2.0rem;
+}
 /*底部*/
 footer {
     width: 100%;
