@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width initial-scale=1">
     <title>理财宝 首页</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="js/vendor/owl.carousel.2.1.0/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="js/vendor/owl.carousel.2.1.0/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -38,7 +40,7 @@
         </nav>
     </header>
     <div>
-        <section class="transaction">
+        <section class="transaction clearfix">
             <div class="trans-content">
                 <div class="trans-data">
                     <span>平台累计成交金额</span>
@@ -56,17 +58,30 @@
             </div>
         </section>
         <section class="ad">
-            <div class="item">
-                <img src="img/ad001.png">
-            </div>
-            <div class="item">
-                <img src="img/ad002.png">
-            </div>
-            <div class="item">
-                <img src="img/ad003.png">
+            <div class="owl-carousel owl-theme">
+                <picture>
+                    <source srcset="img/ad001-l.png" media="(min-width:50em)">
+                    <source srcset="img/ad001-m.png" media="(min-width:30em)">
+                    <img src="img/ad001.png" alt="2015年度报告">
+                </picture>
+                <div class="item">
+                    <picture>
+                        <source srcset="img/ad002-l.png" media="(min-width: 50em)">
+                        <source srcset="img/ad002-m.png" media="(min-width: 30em)">
+                        <img srcset="img/ad002.png" alt="新年红包">
+                    </picture>
+                </div>
+                <div class="item">
+                    <picture>
+                        <source srcset="img/ad003-l.png" media="(min-width: 50em)">
+                        <source srcset="img/ad003-m.png" media="(min-width: 30em)">
+                        <img src="img/ad003.png">
+                    </picture>
+
+                </div>
             </div>
         </section>
-        <section class="feature">
+        <section class="feature clearfix">
             <div class="item">
             <h3>安全</h3>
             <ul>
@@ -229,9 +244,6 @@
                     </div>
                 </div>
             </div>
-
-
-
         </section>
         <nav class="footer clearfix">
             <div class="footer-content">
@@ -280,6 +292,8 @@
         </ul>
         <p>北京XX互联网金融公司 版权所有 &copy; 2016 </p>
     </footer>
-
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="js/vendor/owl.carousel.2.1.0/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

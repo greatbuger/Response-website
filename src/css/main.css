@@ -136,6 +136,11 @@ header .top ul li a{
     padding: 0 1rem;
     color: #fff;
 }
+@media only screen and (max-width: 30em){
+    header .top .tel,header .top ul li:nth-child(3),header .top ul li:nth-child(4){
+        display: none;
+    }
+}
 
 header .main{
     padding:0;
@@ -168,7 +173,40 @@ header .main ul li a.active {
     color: #ffb300;
     background-color: #f8f6f1;
 }
+@media only screen and (max-width: 50em){
+    header .main .brand{
+        float:none;
+        display: block;
+        text-align: center;
+    }
 
+    header .main ul {
+        text-align: center;
+
+    }
+    header .main ul li{
+        border: none;
+    }
+
+    header .main ul li a {
+        line-height: 4rem;
+        padding: 0 1.2rem;
+    }
+}
+@media only screen and (max-width: 30em){
+
+
+    header .main ul li {
+        line-height: 3rem;
+    }
+    header .main ul li:first-child{
+        display: none;
+    }
+    header .main ul li a {
+        font-weight: normal;
+        padding: 0 0.5rem;
+    }
+}
 
 
     /*****************
@@ -185,44 +223,122 @@ header .main ul li a.active {
 
 .trans-content{
     max-width: 90%;
-    height: 4rem;
     font-size: 1.4rem;
     margin: 0 auto;
 }
 .trans-data{
     float: left;
-    margin-left: 1rem;
+    padding: 1rem;
+    text-align: left;
 }
 
 .trans-data span{
     display: inline-block;
-    line-height: 4rem;
+    line-height: 3rem;
     color: #fff;
 }
 .trans-data .trans-mony{
-    border-radius: .3rem;
+    border-radius: .3px;
     background-color: #F2F1F0;
     color: #FBA400;
     letter-spacing: 3px;
     box-shadow: 1px 2px 1px #333 inset;
     font-size: 2rem;
-    line-height: 2.5rem;
+    margin: 0 1rem;
+    padding: 0 1rem;
 
 }
 .trans-report{
-
     text-align: right;
-
 }
 
 .trans-report a{
     display: inline-block;
     padding: 1rem;
+    line-height: 3rem;
     color: #fff;
 
 }
-/*广告*/
+@media only screen and (max-width: 50em){
 
+    .trans-data {
+        font-size: 1.2rem;
+    }
+    .trans-data span{
+        font-size: 1.2rem;
+    }
+    .trans-data span .trans-money {
+       font-size: 1.5rem;
+        letter-spacing:inherit;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .trans-report a {
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 30em){
+
+    .transaction{
+        padding: 0.5rem 0;
+    }
+   .trans-data,.trans-report{
+       float: none;
+       text-align: center;
+   }
+
+    .trans-data,.trans-report a{
+        padding: 0;
+    }
+}
+/*广告*/
+.ad1{
+    background-image: url('../img/ad001-l.png');
+}
+
+.ad2{
+    background-image: url('../img/ad002-l.png');
+}
+
+.ad3{
+    background-image: url('../img/ad003-l.png');
+}
+
+@media only screen and (max-width:50rem){
+    .ad1{
+        width: 100%;
+        background-image: url('../img/ad001-m.png');
+    }
+
+    .ad2{
+        width: 100%;
+        background-image: url('../img/ad002-m.png');
+    }
+
+    .ad3{
+        width: 100%;
+        background-image: url('../img/ad003-m.png');
+    }
+}
+
+@media only screen and (max-width:30rem){
+    .ad1{
+        width: 100%;
+        background-image: url('../img/ad001.png');
+    }
+
+    .ad2{
+        width: 100%;
+        background-image: url('../img/ad002.png');
+    }
+
+    .ad3{
+        width: 100%;
+        background-image: url('../img/ad003.png');
+    }
+}
 
 
 /*feature*/
@@ -260,35 +376,80 @@ header .main ul li a.active {
     line-height: 1.6rem;
     padding-left: 4rem;
 }
+@media only screen and (min-width: 30em)and (max-width: 50em){
+    .feature .item h3{
+        display: block;
+        text-align: center;
+        font-size: 1.6em;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 30em){
+    .feature{
+        width: 96%;
+        margin: 1rem auto;
+    }
+    .feature .item{
+        display: block;
+        width: auto;
+    }
+    .feature .item + .item{
+        margin: 1rem;
+    }
+}
+
+
 /*notice*/
 .notice{
     width: 90%;
     margin: 0 auto;
     font-size: 1.4rem;
-    height: 3rem;
+    line-height: 3rem;
     background-color: #fff;
     box-shadow: 0 0 4px #ccc;
 }
-.notice a:nth-child(1){
-    color: #AAAAAA;
-    padding: 2rem;
+.notic a{
+    float: left;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 2rem;
+    width: 70%;
+}
+.notice a:first-child{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.notice a:nth-child(1):before{
-    content: '最新公告';
+.notice a:first-child:before{
+    content: '最新公告: \00a0\00a0';
+    color: #aaa;
 }
 .notice span{
-    line-height: 3rem;
-    padding: 1rem;
-    color: #AAAAAA;
+   color: #999;
+   font-size: 1.2rem;
+    margin-right: 1rem;
 }
 .notice .more{
     float: right;
     line-height: 3rem;
     margin-right: 1rem ;
     color: #F90;
+}
+@media only screen and (max-width: 30em){
+    .notice{
+        width: 96%;
+        margin:1rem auto;
+        font-size: 1.2rem;
+    }
+    .notice a{
+        margin-left: 1rem;
+    }
+    .notice a span{
+        display: none;
+    }
+
+
+
 }
 /*product*/
 .product{
@@ -301,24 +462,23 @@ header .main ul li a.active {
 }
 .product h2{
     float: left;
+    width: 15%;
     margin-top: 3rem;
     text-align: center;
     font-size: 2.4rem;
-    width: 30%;
+    font-weight: normal;
     color: #635c51;
     padding: 5rem ;
-    font-weight: normal;
-
 }
 .product h2 em{
     display: block;
-    text-align: center;
+    margin-top: 1rem;
     font-size: 1.4rem;
 
 }
 .product .product-content{
     float:right;
-    width: 60%;
+    width: 72%;
     border-left: 1px solid #eee;
     background-color: #f5f9fa;
 }
@@ -403,6 +563,72 @@ header .main ul li a.active {
 .product .product-content .item .buy a:disabled{
     background-color: #ccc !important;
 }
+@media only screen and (max-width: 50em){
+    .product h2{
+        float: none;
+        width: 100%;
+        margin-top: 2rem;
+        font-size: 2.2rem;
+
+    }
+    .product h2 em:first-child{
+        margin-top: 0;
+    }
+    .product h2 em{
+        display: inline;
+        font-size: 1.2rem;
+    }
+    .product .product-content{
+        float: none;
+        width: 100%;
+    }
+    .product .product-content .item h3{
+        margin-bottom: 0;
+    }
+    .product .product-content .item h3 em{
+        font-size: 2.4rem;
+    }
+    .product .product-content .item .info{
+        padding: 1rem 1rem 0;
+        font-size: 1.2rem;
+    }
+    .product .product-content .item .info p span{
+        font-size: 2rem;
+    }
+    .product .product-content .item .buy a{
+        margin: 0.5rem auto;
+    }
+}
+@media only screen and (max-width: 30em){
+    .product h2 em:first-child:before{
+        content:" ";
+        display: table;
+    }
+    .product .product-content .item h3 em{
+        font-size: 1.2rem;
+        margin-right: 0;
+    }
+    .product .product-content .item .info{
+        float: right;
+        width: 70%;
+        padding: 1rem 0;
+        border: none;
+    }
+    .product .product-content .item .info p span{
+        font-size: 1.8rem;
+    }
+    .product .product-content .item .buy{
+        clear: both;
+        float: none;
+        width: 100%;
+        padding: 1rem 0 2rem;
+    }
+    .product .product-content .item .buy a{
+        margin-top: 0;
+        max-width: 26rem;
+    }
+
+}
 /*底部导航*/
 .footer{
     background-color: #E6E6E6;
@@ -417,7 +643,8 @@ header .main ul li a.active {
     background: url("../img/logo@1x.png")no-repeat;
     display: block;
     float: left;
-
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
     width: 20%;
     height: 35px;
 }
@@ -431,6 +658,32 @@ header .main ul li a.active {
 }
 .footer-content ul li .title{
     font-size: 2.0rem;
+}
+@media only screen and (max-width: 50em){
+    .footer-content .brand{
+        display: none;
+    }
+    .footer-content ul{
+        width: 20%;
+    }
+    .footer-content ul li{
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+    .footer-content ul li .little{
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+    }
+}
+@media only screen and (max-width: 50em){
+    .footer-content{
+        width: 98%;
+    }
+    .footer-content ul li .little{
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
 }
 /*底部*/
 footer {
