@@ -1,0 +1,838 @@
+/* ===========
+   基本默认值
+   ===========*/
+
+html{
+    font-size: 62.5%;
+    color:#222;
+}
+::selection{
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+/* ==========
+   工具样式
+   ========== */
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+/* ==========
+   浏览器更新提示样式
+   ========== */
+.browseupgrade{
+    margin: 0;
+    padding: 1rem;
+    background: #ccc;
+}
+
+/* ==========
+   自定义页面样式
+   ========== */
+
+body {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: #f7f7f7;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #0ae;
+    text-decoration: underline;
+}
+
+/*网站头部*/
+header {
+    width: 100%;
+}
+header .top{
+    line-height: 3rem;
+    padding: 0 0 0 1.5rem;
+    background:#555;
+    color:#fff;
+    border-bottom: 1px #ecc000 solid;
+}
+header .top .tel{
+    float: left;
+}
+header .top ul{
+    text-align: right;
+}
+header .top ul li{
+    display: inline-block;
+}
+header .top ul li + li{
+    border-left: 1px solid #999;
+    margin-left: -3px;
+    /*是为了去除因li标签换行产生的空白符，有缺点：各个浏览器不一定兼容，不一定是3px，
+    还有li标签不闭合的方法；
+    还有在li的父元素ul定义font-size：0，然后再li定义font-size:12px,缺点是会产生下边距*/
+}
+header .top ul li a{
+    display: inline-block;/*a标签是行内元素，这是为了padding起作用*/
+    padding: 0 1rem;
+    color: #fff;
+}
+@media only screen and (max-width: 30em){
+    header .top .tel,header .top ul li:nth-child(3),header .top ul li:nth-child(4){
+        display: none;
+    }
+}
+
+header .main{
+    padding:0;
+    line-height: 5.5rem;
+}
+header .main .brand{
+    float: left;
+    padding: 1rem 0 0 0;
+}
+header .main ul{
+    text-align: right;
+}
+header .main ul li{
+    display: inline-block;
+}
+header .main ul li + li {
+    border-left: 1px solid #f0ede9;
+}
+header .main ul li a{
+    display: inline-block;
+    padding: 0 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 5.5rem;
+    color: #7c7a65;
+    text-decoration: none;
+}
+header .main ul li a:hover,
+header .main ul li a.active {
+    color: #ffb300;
+    background-color: #f8f6f1;
+}
+@media only screen and (max-width: 50em){
+    header .main .brand{
+        float:none;
+        display: block;
+        text-align: center;
+    }
+
+    header .main ul {
+        text-align: center;
+
+    }
+    header .main ul li{
+        border: none;
+    }
+
+    header .main ul li a {
+        line-height: 4rem;
+        padding: 0 1.2rem;
+    }
+}
+@media only screen and (max-width: 30em){
+
+
+    header .main ul li {
+        line-height: 3rem;
+    }
+    header .main ul li:first-child{
+        display: none;
+    }
+    header .main ul li a {
+        font-weight: normal;
+        padding: 0 0.5rem;
+    }
+}
+
+
+    /*****************
+    * 主要内容
+    ****************/
+.container{
+    width: 100%;
+}
+
+.transaction{
+    width: 100%;
+    background-color: #7C7365;
+}
+
+.trans-content{
+    max-width: 90%;
+    font-size: 1.4rem;
+    margin: 0 auto;
+}
+.trans-data{
+    float: left;
+    padding: 1rem;
+    text-align: left;
+}
+
+.trans-data span{
+    display: inline-block;
+    line-height: 3rem;
+    color: #fff;
+}
+.trans-data .trans-mony{
+    border-radius: .3px;
+    background-color: #F2F1F0;
+    color: #FBA400;
+    letter-spacing: 3px;
+    box-shadow: 1px 2px 1px #333 inset;
+    font-size: 2rem;
+    margin: 0 1rem;
+    padding: 0 1rem;
+
+}
+.trans-report{
+    text-align: right;
+}
+
+.trans-report a{
+    display: inline-block;
+    padding: 1rem;
+    line-height: 3rem;
+    color: #fff;
+
+}
+@media only screen and (max-width: 50em){
+
+    .trans-data {
+        font-size: 1.2rem;
+    }
+    .trans-data span{
+        font-size: 1.2rem;
+    }
+    .trans-data span .trans-money {
+       font-size: 1.5rem;
+        letter-spacing:inherit;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .trans-report a {
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 30em){
+
+    .transaction{
+        padding: 0.5rem 0;
+    }
+   .trans-data,.trans-report{
+       float: none;
+       text-align: center;
+   }
+
+    .trans-data,.trans-report a{
+        padding: 0;
+    }
+}
+/*广告*/
+.ad1{
+    background-image: url('../img/ad001-l.png');
+}
+
+.ad2{
+    background-image: url('../img/ad002-l.png');
+}
+
+.ad3{
+    background-image: url('../img/ad003-l.png');
+}
+
+@media only screen and (max-width:50rem){
+    .ad1{
+        width: 100%;
+        background-image: url('../img/ad001-m.png');
+    }
+
+    .ad2{
+        width: 100%;
+        background-image: url('../img/ad002-m.png');
+    }
+
+    .ad3{
+        width: 100%;
+        background-image: url('../img/ad003-m.png');
+    }
+}
+
+@media only screen and (max-width:30rem){
+    .ad1{
+        width: 100%;
+        background-image: url('../img/ad001.png');
+    }
+
+    .ad2{
+        width: 100%;
+        background-image: url('../img/ad002.png');
+    }
+
+    .ad3{
+        width: 100%;
+        background-image: url('../img/ad003.png');
+    }
+}
+
+
+/*feature*/
+.feature{
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 0;
+}
+.feature .item{
+    display: inline-block;
+    width: calc(33.333333333333% - 1rem - 4px); /*需要减掉item之间的margin-left总和（1.5rem*2)、3个item的左右border宽度和（2px*2*3），*/
+    border: solid 2px #E6E6E6;
+    border-radius: 2px;
+    font-size: 16px;
+
+
+}
+.feature .item + .item{
+    margin-left: 1.5rem;
+}
+.feature .item h3{
+    float: left;
+    color: #FF9900;
+    margin: 2rem 2rem;
+    font-size: 2rem;
+}
+.feature .item ul{
+    display: inline-block;
+    margin: 1rem;
+}
+
+.feature .item ul li{
+    color: #999999;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    padding-left: 4rem;
+}
+@media only screen and (min-width: 30em)and (max-width: 50em){
+    .feature .item h3{
+        display: block;
+        text-align: center;
+        font-size: 1.6em;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 30em){
+    .feature{
+        width: 96%;
+        margin: 1rem auto;
+    }
+    .feature .item{
+        display: block;
+        width: auto;
+    }
+    .feature .item + .item{
+        margin: 1rem;
+    }
+}
+
+
+/*notice*/
+.notice{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    background-color: #fff;
+    box-shadow: 0 0 4px #ccc;
+}
+.notic a{
+    float: left;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 2rem;
+    width: 70%;
+}
+.notice a:first-child{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.notice a:first-child:before{
+    content: '最新公告: \00a0\00a0';
+    color: #aaa;
+}
+.notice span{
+   color: #999;
+   font-size: 1.2rem;
+    margin-right: 1rem;
+}
+.notice .more{
+    float: right;
+    line-height: 3rem;
+    margin-right: 1rem ;
+    color: #F90;
+}
+@media only screen and (max-width: 30em){
+    .notice{
+        width: 96%;
+        margin:1rem auto;
+        font-size: 1.2rem;
+    }
+    .notice a{
+        margin-left: 1rem;
+    }
+    .notice a span{
+        display: none;
+    }
+
+
+
+}
+/*product*/
+.product{
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 1.4rem;
+    background-color: #f5f9fa;
+    border-top: 2px solid #FF7F27;
+    box-shadow: 0 0 4px #ccc;
+}
+.product h2{
+    float: left;
+    width: 15%;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: normal;
+    color: #635c51;
+    padding: 5rem ;
+}
+.product h2 em{
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+
+}
+.product .product-content{
+    float:right;
+    width: 72%;
+    border-left: 1px solid #eee;
+    background-color: #f5f9fa;
+}
+.product .product-content .item{
+    width: 100%;
+}
+.product .product-content .item + .item{
+    border:1px solid #eee;
+}
+.product .product-content .item h3{
+    float: left;
+    width: 30%;
+    margin: 1.5rem 0;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: center;
+}
+.product .product-content .item h3 em{
+    margin-right: 0.5rem;
+    font-size: 3.6rem;
+    font-style: normal;
+    color: #999;
+
+}
+.product .product-content .item h3  i{
+    display: block;
+    font-style: normal;
+    color: #999;
+    font-size: 1.2rem;
+}
+.product .product-content .item .info{
+    float: left;
+    width: 50%;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+.product .product-content .item .info p{
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 50%;
+}
+.product .product-content .item .info p:last-child{
+    width: 40%;
+}
+.product .product-content .item .info p span{
+
+    display:block;
+    font-size: 2.4rem;
+    color: #ff9900;
+}
+.product .product-content .item .info p i{
+    float: right;
+    font-size: 1.2rem;
+    margin-top: -2rem;
+    margin-left: -200rem;
+
+}
+.product .product-content .item .buy{
+    float: left;
+    padding: 1rem;
+    width:5% ;
+}
+.product .product-content .item .buy a{
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 12rem;
+    line-height: 4rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff9900;
+    border-radius: 5px;
+
+}
+.product .product-content .item .buy a:hover,
+.product .product-content .item .buy a:active{
+    background-color: #ffc468;
+}
+.product .product-content .item .buy a:disabled{
+    background-color: #ccc !important;
+}
+@media only screen and (max-width: 50em){
+    .product h2{
+        float: none;
+        width: 100%;
+        margin-top: 2rem;
+        font-size: 2.2rem;
+
+    }
+    .product h2 em:first-child{
+        margin-top: 0;
+    }
+    .product h2 em{
+        display: inline;
+        font-size: 1.2rem;
+    }
+    .product .product-content{
+        float: none;
+        width: 100%;
+    }
+    .product .product-content .item h3{
+        margin-bottom: 0;
+    }
+    .product .product-content .item h3 em{
+        font-size: 2.4rem;
+    }
+    .product .product-content .item .info{
+        padding: 1rem 1rem 0;
+        font-size: 1.2rem;
+    }
+    .product .product-content .item .info p span{
+        font-size: 2rem;
+    }
+    .product .product-content .item .buy a{
+        margin: 0.5rem auto;
+    }
+}
+@media only screen and (max-width: 30em){
+    .product h2 em:first-child:before{
+        content:" ";
+        display: table;
+    }
+    .product .product-content .item h3 em{
+        font-size: 1.2rem;
+        margin-right: 0;
+    }
+    .product .product-content .item .info{
+        float: right;
+        width: 70%;
+        padding: 1rem 0;
+        border: none;
+    }
+    .product .product-content .item .info p span{
+        font-size: 1.8rem;
+    }
+    .product .product-content .item .buy{
+        clear: both;
+        float: none;
+        width: 100%;
+        padding: 1rem 0 2rem;
+    }
+    .product .product-content .item .buy a{
+        margin-top: 0;
+        max-width: 26rem;
+    }
+
+}
+/*底部导航*/
+.footer{
+    background-color: #E6E6E6;
+    border-top: 2px solid #eee;
+    padding: 3rem 0;
+}
+.footer-content{
+    width: 90%;
+    margin: 0 auto;
+}
+.footer-content .brand{
+    background: url("../img/logo@1x.png")no-repeat;
+    display: block;
+    float: left;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    width: 20%;
+    height: 35px;
+}
+.footer-content ul{
+    float: left;
+    width: 15%;
+}
+.footer-content ul li{
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+}
+.footer-content ul li .title{
+    font-size: 2.0rem;
+}
+@media only screen and (max-width: 50em){
+    .footer-content .brand{
+        display: none;
+    }
+    .footer-content ul{
+        width: 20%;
+    }
+    .footer-content ul li{
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+    .footer-content ul li .little{
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+    }
+}
+@media only screen and (max-width: 50em){
+    .footer-content{
+        width: 98%;
+    }
+    .footer-content ul li .little{
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+}
+/*底部*/
+footer {
+    width: 100%;
+    background-color: #ededed;
+    padding: 3rem 0 5rem;
+}
+footer ul{
+    text-align: center;
+}
+
+footer ul li{
+    display: inline-block;
+}
+footer ul li .icon{
+    display: inline-block;
+    text-indent: -999rem;/*通过文字的缩进隐藏文字*/
+    margin-right: 1.5rem;
+    background: url("../img/cert1.png")no-repeat;
+    background-size: 466px 447px;
+    overflow: hidden;
+
+}
+footer ul li .iocn-zfywxk{
+    width: 38px;
+    height: 27px;
+    background-position: -369px -45px;
+}
+footer ul li .iocn-pcirz{
+    width: 78px;
+    height: 27px;
+    background-position: -110px -96px;
+}
+footer ul li .iocn-visayz{
+    width: 36px;
+    height: 27px;
+    background-position: -426px -90px;
+}
+
+footer ul li .iocn-vsjmfw{
+    width: 63px;
+    height: 27px;
+    background-position: -401px -186px;
+}
+
+footer ul li .iocn-wlgs{
+    width: 78px;
+    height: 27px;
+    background-position: -110px -96px;
+}
+
+footer ul li .iocn-rzcx{
+    width: 75px;
+    height: 27px;
+    background-position: 0 -320px;
+}
+footer ul li .iocn-bjgs{
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+    background-size: 30px;
+    background-image: url('../img/cert2.png');
+}
+
+footer p{
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    margin: 2rem auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
